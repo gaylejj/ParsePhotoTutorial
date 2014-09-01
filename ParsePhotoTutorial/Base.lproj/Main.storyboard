@@ -83,7 +83,7 @@
         <!--Sign Up-->
         <scene sceneID="qzC-rE-8Zb">
             <objects>
-                <viewController id="CbH-YT-hvx" userLabel="Sign Up" sceneMemberID="viewController">
+                <viewController id="CbH-YT-hvx" userLabel="Sign Up" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BaD-T7-fPE"/>
                         <viewControllerLayoutGuide type="bottom" id="Hvy-sH-uuU"/>
@@ -119,6 +119,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="CbH-YT-hvx" eventType="touchUpInside" id="IIs-dF-YWA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,6 +135,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="Jyf-qn-hLg" id="VOe-8M-ZIR"/>
+                        <outlet property="usernameTextField" destination="DyQ-5G-JET" id="DHH-on-szF"/>
                         <segue destination="uwB-cL-s43" kind="show" identifier="signupSuccessful" id="dNv-OM-GsJ"/>
                     </connections>
                 </viewController>

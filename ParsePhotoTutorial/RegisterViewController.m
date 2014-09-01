@@ -7,8 +7,11 @@
 //
 
 #import "RegisterViewController.h"
+#import <Parse/Parse.h>
 
 @interface RegisterViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -17,6 +20,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)signupButtonPressed:(id)sender {
+    PFUser *user = [PFUser user];
+    
+    user.username = self.usernameTextField.text;
+    user.password = self.passwordTextField.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            NSString *errorString = [error.userInfo objectForKey:@"error"];
+            [self errorAlertController:errorString];
+        } else {
+            [self performSegueWithIdentifier:@"signupSuccessful" sender:self];
+        }
+    }];
+}
+
+-(void)errorAlertController:(NSString *)errorString {
+    UIAlertController* errorAlertController = [UIAlertController alertControllerWithTitle:@"Error!" message:errorString preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [errorAlertController addAction:cancelAction];
+    
+    [self presentViewController:errorAlertController animated:true completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
