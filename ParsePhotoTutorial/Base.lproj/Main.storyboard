@@ -7,7 +7,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Login" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -43,6 +43,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZ7-L9-jPr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgp-S6-mu5">
                                 <rect key="frame" x="272.5" y="232" width="55" height="30"/>
@@ -73,6 +76,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="w4a-aj-8vs"/>
                     <connections>
+                        <outlet property="passwordTextField" destination="xNh-cS-vqM" id="vKe-OD-kaQ"/>
+                        <outlet property="usernameTextField" destination="sRU-vi-f39" id="s5B-XM-QcO"/>
                         <segue destination="uwB-cL-s43" kind="show" identifier="loginSuccessful" id="WMU-w7-jNC"/>
                     </connections>
                 </viewController>
@@ -260,6 +265,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dNv-OM-GsJ"/>
+        <segue reference="WMU-w7-jNC"/>
     </inferredMetricsTieBreakers>
 </document>

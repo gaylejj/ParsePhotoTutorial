@@ -34,6 +34,7 @@
 		257C86C619B3D8C40069D828 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257C86C519B3D8C40069D828 /* UIKit.framework */; };
 		257C86C919B3D9080069D828 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 257C86C819B3D9080069D828 /* Constants.m */; };
 		257C86CC19B3F1F40069D828 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257C86CB19B3F1F40069D828 /* RegisterViewController.m */; };
+		257C86CF19B431640069D828 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257C86CE19B431640069D828 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		257C86C819B3D9080069D828 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		257C86CA19B3F1F40069D828 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		257C86CB19B3F1F40069D828 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		257C86CD19B431640069D828 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		257C86CE19B431640069D828 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 				257C86C819B3D9080069D828 /* Constants.m */,
 				257C86CA19B3F1F40069D828 /* RegisterViewController.h */,
 				257C86CB19B3F1F40069D828 /* RegisterViewController.m */,
+				257C86CD19B431640069D828 /* LoginViewController.h */,
+				257C86CE19B431640069D828 /* LoginViewController.m */,
 			);
 			path = ParsePhotoTutorial;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			files = (
 				257C86CC19B3F1F40069D828 /* RegisterViewController.m in Sources */,
 				257C86C919B3D9080069D828 /* Constants.m in Sources */,
+				257C86CF19B431640069D828 /* LoginViewController.m in Sources */,
 				257C868019B2EB0D0069D828 /* AppDelegate.m in Sources */,
 				257C869F19B3D32D0069D828 /* WallViewController.m in Sources */,
 				257C867D19B2EB0D0069D828 /* main.m in Sources */,
@@ -508,6 +514,7 @@
 				257C869919B2EB0D0069D828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257C869A19B2EB0D0069D828 /* Build configuration list for PBXNativeTarget "ParsePhotoTutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +523,7 @@
 				257C869C19B2EB0D0069D828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
