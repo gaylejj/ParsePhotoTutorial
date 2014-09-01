@@ -51,7 +51,7 @@
             
             [wallImageObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (succeeded) {
-                    [self dismissViewControllerAnimated:true completion:nil];
+                    [self.navigationController popViewControllerAnimated:true];
                 } else {
                     NSString *errorString = [error.userInfo objectForKey:@"error"];
                     [self errorAlertController:errorString];
