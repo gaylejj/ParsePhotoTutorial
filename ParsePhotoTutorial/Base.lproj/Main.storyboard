@@ -185,7 +185,7 @@
         <!--Upload-->
         <scene sceneID="QNs-fZ-nHB">
             <objects>
-                <viewController id="z4G-oe-pjt" userLabel="Upload" sceneMemberID="viewController">
+                <viewController id="z4G-oe-pjt" userLabel="Upload" customClass="UploadViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="544-zz-4WI"/>
                         <viewControllerLayoutGuide type="bottom" id="9jM-Nw-u68"/>
@@ -201,18 +201,8 @@
                                     <constraint firstAttribute="width" constant="280" id="vrd-oP-GU3"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-VP-06f">
-                                <rect key="frame" x="160" y="277" width="96" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="it4-us-J5j"/>
-                                    <constraint firstAttribute="width" constant="96" id="k2c-gn-OY7"/>
-                                </constraints>
-                                <state key="normal" title="Select Picture">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDU-Cf-Jsz">
-                                <rect key="frame" x="352" y="277" width="88" height="30"/>
+                                <rect key="frame" x="352" y="288" width="88" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="3nn-Pi-C7C"/>
                                     <constraint firstAttribute="height" constant="30" id="ROp-YV-10g"/>
@@ -220,26 +210,61 @@
                                 <state key="normal" title="Send Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendPicturePressed:" destination="z4G-oe-pjt" eventType="touchUpInside" id="bl9-zT-nR2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMJ-E6-dkc">
+                                <rect key="frame" x="160" y="250" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="PPy-9l-A16"/>
+                                    <constraint firstAttribute="height" constant="30" id="iJO-iK-rGu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-VP-06f">
+                                <rect key="frame" x="160" y="288" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="it4-us-J5j"/>
+                                    <constraint firstAttribute="width" constant="96" id="k2c-gn-OY7"/>
+                                </constraints>
+                                <state key="normal" title="Select Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPicturePressed:" destination="z4G-oe-pjt" eventType="touchUpInside" id="4Ef-HK-MWP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mDU-Cf-Jsz" firstAttribute="top" secondItem="Gbz-Xk-GjN" secondAttribute="bottom" constant="35" id="0rz-G1-451"/>
+                            <constraint firstAttribute="centerX" secondItem="CMJ-E6-dkc" secondAttribute="centerX" id="8qm-UC-CbC"/>
                             <constraint firstItem="Gbz-Xk-GjN" firstAttribute="top" secondItem="544-zz-4WI" secondAttribute="bottom" constant="8" id="Bml-Jl-8sK"/>
                             <constraint firstItem="Gbz-Xk-GjN" firstAttribute="leading" secondItem="Mki-Ol-xjl" secondAttribute="leading" constant="20" id="EAM-J7-Eev"/>
+                            <constraint firstItem="Rgc-VP-06f" firstAttribute="top" secondItem="CMJ-E6-dkc" secondAttribute="bottom" constant="8" id="GIS-PU-py6"/>
+                            <constraint firstItem="mDU-Cf-Jsz" firstAttribute="top" secondItem="CMJ-E6-dkc" secondAttribute="bottom" constant="8" id="YYh-jD-rm2"/>
                             <constraint firstAttribute="centerX" secondItem="Gbz-Xk-GjN" secondAttribute="centerX" id="a7x-hy-qyL"/>
                             <constraint firstItem="Rgc-VP-06f" firstAttribute="top" secondItem="Gbz-Xk-GjN" secondAttribute="bottom" constant="35" id="e3k-xO-NWq"/>
                             <constraint firstAttribute="trailing" secondItem="Gbz-Xk-GjN" secondAttribute="trailing" constant="20" id="kiw-4g-XeM"/>
                             <constraint firstItem="Gbz-Xk-GjN" firstAttribute="trailing" secondItem="mDU-Cf-Jsz" secondAttribute="trailing" id="nMF-3x-xsH"/>
                             <constraint firstItem="Gbz-Xk-GjN" firstAttribute="leading" secondItem="Rgc-VP-06f" secondAttribute="leading" id="s5L-pd-YUi"/>
+                            <constraint firstItem="CMJ-E6-dkc" firstAttribute="top" secondItem="Gbz-Xk-GjN" secondAttribute="bottom" constant="8" id="udi-Qw-fJL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="EAM-J7-Eev"/>
                                 <exclude reference="kiw-4g-XeM"/>
+                                <exclude reference="e3k-xO-NWq"/>
+                                <exclude reference="0rz-G1-451"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="CMJ-E6-dkc" id="Ghy-R0-4D8"/>
+                        <outlet property="uploadImageView" destination="Gbz-Xk-GjN" id="Yb5-Fp-G88"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJD-GP-fAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

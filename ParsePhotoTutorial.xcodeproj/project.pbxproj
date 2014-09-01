@@ -35,6 +35,7 @@
 		257C86C919B3D9080069D828 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 257C86C819B3D9080069D828 /* Constants.m */; };
 		257C86CC19B3F1F40069D828 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257C86CB19B3F1F40069D828 /* RegisterViewController.m */; };
 		257C86CF19B431640069D828 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257C86CE19B431640069D828 /* LoginViewController.m */; };
+		257C86D519B4D0E60069D828 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257C86D419B4D0E60069D828 /* UploadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		257C86CB19B3F1F40069D828 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		257C86CD19B431640069D828 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		257C86CE19B431640069D828 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		257C86D319B4D0E60069D828 /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		257C86D419B4D0E60069D828 /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,19 +149,14 @@
 		257C867919B2EB0D0069D828 /* ParsePhotoTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				257C86D019B4D0BE0069D828 /* Controller */,
 				257C867E19B2EB0D0069D828 /* AppDelegate.h */,
 				257C867F19B2EB0D0069D828 /* AppDelegate.m */,
 				257C868419B2EB0D0069D828 /* Main.storyboard */,
 				257C868719B2EB0D0069D828 /* Images.xcassets */,
 				257C867A19B2EB0D0069D828 /* Supporting Files */,
-				257C869D19B3D32D0069D828 /* WallViewController.h */,
-				257C869E19B3D32D0069D828 /* WallViewController.m */,
 				257C86C719B3D9080069D828 /* Constants.h */,
 				257C86C819B3D9080069D828 /* Constants.m */,
-				257C86CA19B3F1F40069D828 /* RegisterViewController.h */,
-				257C86CB19B3F1F40069D828 /* RegisterViewController.m */,
-				257C86CD19B431640069D828 /* LoginViewController.h */,
-				257C86CE19B431640069D828 /* LoginViewController.m */,
 			);
 			path = ParsePhotoTutorial;
 			sourceTree = "<group>";
@@ -213,6 +211,37 @@
 				257C86A219B3D81C0069D828 /* ParseFacebookUtils.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		257C86D019B4D0BE0069D828 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				257C86D119B4D0C30069D828 /* User Controllers */,
+				257C86D219B4D0CE0069D828 /* Picture Controllers */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		257C86D119B4D0C30069D828 /* User Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				257C86CA19B3F1F40069D828 /* RegisterViewController.h */,
+				257C86CB19B3F1F40069D828 /* RegisterViewController.m */,
+				257C86CD19B431640069D828 /* LoginViewController.h */,
+				257C86CE19B431640069D828 /* LoginViewController.m */,
+			);
+			name = "User Controllers";
+			sourceTree = "<group>";
+		};
+		257C86D219B4D0CE0069D828 /* Picture Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				257C869D19B3D32D0069D828 /* WallViewController.h */,
+				257C869E19B3D32D0069D828 /* WallViewController.m */,
+				257C86D319B4D0E60069D828 /* UploadViewController.h */,
+				257C86D419B4D0E60069D828 /* UploadViewController.m */,
+			);
+			name = "Picture Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				257C86D519B4D0E60069D828 /* UploadViewController.m in Sources */,
 				257C86CC19B3F1F40069D828 /* RegisterViewController.m in Sources */,
 				257C86C919B3D9080069D828 /* Constants.m in Sources */,
 				257C86CF19B431640069D828 /* LoginViewController.m in Sources */,
